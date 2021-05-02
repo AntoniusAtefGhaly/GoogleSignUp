@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<div class="container">
+        <div class="row">
+        <div *ngIf="!user" class="mt-5 card text-center col-md-6 offset-md-3">
+            <h6 class="card-header "> Google login</h6>
+            <div class="card-block">
+                <p class="card-text my-5"><i class="fa fa-google " style="color: red;">   </i> Sign in with google</p>
+                
+            </div>
+            <div class="card-block">
+                <button class="btn btn-dark btn-social-icon btn-google mx-1" (click)="SignInWithGoogle()">login</button>
+            </div>
+        </div>
+        <div *ngIf="user" class="card text-center col-md-6 offset-md-3">
+            <h6 class="card-header"> {{wellcomMSG}} successfully</h6>
+            <h4 class="card-title">{{user.name}}</h4>
+            <div class="card-block"></div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <img src="{{user.photoUrl}}" class="card-img-top img-responsive photo" style="width: 100%;" >
+                </div>
+            </div>
+            <div class="card-block">
+                <p class="card-text">{{user.email}}</p>
+            </div>
+            <div class="card-block">
+                <button class="btn btn-primary btn-google mx-1" (click)="signOut()">Log out</button>
+            </div>
+        </div>
+    </div>
+</div>

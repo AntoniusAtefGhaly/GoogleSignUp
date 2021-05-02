@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "http://antoniusatef-001-site1.btempurl.com/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }
